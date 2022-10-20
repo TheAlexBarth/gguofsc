@@ -1,0 +1,18 @@
+Package: gguofsc
+Type: Package
+Title: Official Color Scales for UofSC
+Version: 0.1.0.9000
+Author: person('Alex','Barth', email = 'abarth1014@gmail.com',
+                role = c('aut','cre'), comment = c(ORCID = "0000-0001-7154-6260"))
+Maintainer: Alex Barth <abarth1014@gmail.com>
+Description: This package provides color scales based on UofSC's official color
+  scheme.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Imports:
+  grDevices,
+  ggplot2 (>= 2.0.0)
+Depends:
+  R (>= 3.5.0)
+RoxygenNote: 7.1.2
