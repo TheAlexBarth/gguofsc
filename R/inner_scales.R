@@ -1,21 +1,21 @@
-#' Access UofSC colors
+#' Access usc colors
 #'
-#' A function to extract official UofSC colors
+#' A function to extract official usc colors
 #'
 #'
 #' @references
 #' \url{https://sc.edu/about/offices_and_divisions/communications/toolbox/visuals/colors/}
 #'
-#' @param ... character names of uofsc colors
+#' @param ... character names of usc colors
 #'
 #' @export
-uofsc_cols <- function(...){
+usc_cols <- function(...){
   cols <- c(...)
 
   if (is.null(cols)) {
-    return(gguofsc_db[['cols']])
+    return(ggusc_db[['cols']])
   } else {
-    return(gguofsc_db[['cols']][cols])
+    return(ggusc_db[['cols']][cols])
   }
 }
 
@@ -29,17 +29,17 @@ uofsc_cols <- function(...){
 #'
 #' @importFrom grDevices colorRampPalette
 #' @export
-uofsc_pal <- function(palette = 'simple',
+usc_pal <- function(palette = 'simple',
                       rev = FALSE,
                       ...) {
 
-  if(!(palette %in% names(gguofsc_db$palettes))){
+  if(!(palette %in% names(ggusc_db$palettes))){
     stop(paste("Must provide valid palette name:",
-                paste0(names(gguofsc_db$palettes),
+                paste0(names(ggusc_db$palettes),
                              collapse = ', ')))
   }
 
-  pal <- gguofsc_db$palettes[[palette]]
+  pal <- ggusc_db$palettes[[palette]]
 
   if(rev){
     pal <- rev(pal)
